@@ -21,11 +21,12 @@ Click "Open in Colab" badge above
 
 | Model | File | Epochs | AUC | AP |
 |-------|------|--------|-----|-----|
-| SuperGNN-Fast | `grm_trainer_1000.py` | 1000 | **0.9548 ± 0.0071** | **0.9475 ± 0.0074** |
-| SuperGNN-Deep | `grm_trainer_3000.py` | 3000 | **0.9706 ± 0.0036** | **0.9658 ± 0.0042** |
+| SuperGNN-Fast       | `grm_trainer_1000.py`  | 1000 | **0.9548 ± 0.0071** | **0.9475 ± 0.0074** |
+| SuperGNN-Deep       | `grm_trainer_3000.py`  | 3000 | **0.9706 ± 0.0036** | **0.9658 ± 0.0042** |
+| SuperGNN-comparison | `models_comparison.py` | 5000 | **0.9746 ± 0.0026** | **0.9697 ± 0.0032** |
 
 **5 Independent Runs**: Seeds [42, 123, 456, 789, 999] - Full reproducibility  
-**Performance**: +1.58% AUC improvement from 1000→3000 epochs
+**Performance**: +1.58% AUC improvement from 1000→3000 epochs, significant better than other models 5000 epochs (models_comparison.py)
 
 ## Pipeline Architecture
 **SuperPhysicsGNN**: 52,065 parameters, Multi-Head GAT with Edge Weights
