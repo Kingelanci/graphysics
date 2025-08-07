@@ -45,6 +45,15 @@ Click "Open in Colab" badge above
 - **Reproducibility**: 5 independent runs with different seeds
 - **Top Equation Hub**: Compton Scattering (92 connections, avg weight 0.704)
 
+- Statistical Validation
+
+FDR Analysis (fdr_analysis.py) - Bootstrap confidence intervals, negative controls, sensitivity analysis
+Model Comparison (model_comparison.py) - Statistical testing against baselines (GCN, GAT, GraphSAGE)
+
+Network Visualizations
+
+Ego Networks (ego_networks.py) - Physics concept-centered visualizations
+
 ## Requirements
 
 ```
@@ -71,7 +80,11 @@ graphysics/
 ├── grm_trainer_1000.py               # Fast training (15min)
 ├── grm_trainer_3000.py               # Full training (45min)
 ├── final_physics_database.json       # 400 equations dataset
-└── requirements.txt                   # Dependencies
+├── requirements.txt                   # Dependencies
+└── analysis/
+    ├── fdr_analysis.py               # Statistical FDR validation
+    ├── ego_networks.py               # Graph visualizations & ego networks
+    └── model_comparison.py           # Baseline comparisons
 ```
 
 ## Author
