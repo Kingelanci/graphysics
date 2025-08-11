@@ -101,6 +101,5 @@ Indipendent Researcher
   title={Graph Neural Networks for Physics Equation Discovery using Enhanced Semantic Representations},
   author={Massimiliano Romiti},
   year={2025},
-  doi={https://doi.org/10.5281/zenodo.16530467}
-}
+  doi={https://doi.org/10.48550/arXiv.2508.05724}
 ```
