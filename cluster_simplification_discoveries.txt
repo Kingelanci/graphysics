@@ -1,0 +1,791 @@
+================================================================================
+CLUSTER SIMPLIFICATION DISCOVERIES
+================================================================================
+
+Generated: 2025-08-10T16:55:03.784191
+Total Equations: 400
+Clusters Analyzed: 30
+
+SUMMARY:
+  ✅ Identities: 6
+  🔍 Residuals: 0
+  📦 Simplified: 22
+  ❌ Failed: 2
+
+============================================================
+CLUSTER #1 (99 equations)
+============================================================
+
+📍 BACKBONE EQUATION:
+   Wave Equation for B-field
+   Eq(B*nablar**2, E*B*diffr**2*epsilon_0*mu0/difftr**2)
+
+➕ SUBSTITUTIONS (3):
+   mu0 = B*difft*nabla/(J*difft + E*diffE*epsilon_0)
+   (from Maxwell's Fourth Equation (Ampère-Maxwell))
+   epsilon_0 = difft*(B*nabla - J*mu0)*exp(-1)/(diffE*mu0)
+   (from Maxwell's Fourth Equation (Ampère-Maxwell))
+   B = mu0*(J*difft + E*diffE*epsilon_0)/(difft*nabla)
+   (from Maxwell's Fourth Equation (Ampère-Maxwell))
+
+📊 SIMPLIFIED TO:
+   Eq(mu0*nablar**2*(J*difft + E*diffE*epsilon_0)/(difft*nabla), E*diffr**2*epsilon_0*mu0**2*(J*difft + E*diffE*epsilon_0)/(difft*difftr**2*nabla))
+
+🎯 RESULT: SIMPLIFIED
+
+🔬 DISCOVERED RELATIONS:
+   • key_variables: Core concepts connecting 9 variables across the cluster
+     Variables: nabla, diffr, difftr, nablar, difft, mu0, J, epsilon_0, diffE
+   • fundamental_constants: Expression involves fundamental constants of nature
+     Constants: e, epsilon_0
+   • quadratic_relation: Expression involves squared terms - possible conservation law
+   • residual: Difference between left and right sides after simplification
+     Expression: -E*diffr**2*epsilon_0*mu0**2*(J*difft + E*diffE*epsilon_0)/(difft*difftr**2*nabla) + mu0*nablar**2*(J*difft + E*diffE*epsilon_0)/(difft*nabla)
+
+============================================================
+CLUSTER #2 (83 equations)
+============================================================
+
+📍 BACKBONE EQUATION:
+   Wave Equation for B-field
+   Eq(B*nablar**2, E*B*diffr**2*epsilon_0*mu0/difftr**2)
+
+➕ SUBSTITUTIONS (3):
+   mu0 = B*difft*nabla/(J*difft + E*diffE*epsilon_0)
+   (from Maxwell's Fourth Equation (Ampère-Maxwell))
+   epsilon_0 = difft*(B*nabla - J*mu0)*exp(-1)/(diffE*mu0)
+   (from Maxwell's Fourth Equation (Ampère-Maxwell))
+   B = mu0*(J*difft + E*diffE*epsilon_0)/(difft*nabla)
+   (from Maxwell's Fourth Equation (Ampère-Maxwell))
+
+📊 SIMPLIFIED TO:
+   Eq(mu0*nablar**2*(J*difft + E*diffE*epsilon_0)/(difft*nabla), E*diffr**2*epsilon_0*mu0**2*(J*difft + E*diffE*epsilon_0)/(difft*difftr**2*nabla))
+
+🎯 RESULT: SIMPLIFIED
+
+🔬 DISCOVERED RELATIONS:
+   • key_variables: Core concepts connecting 9 variables across the cluster
+     Variables: nabla, diffr, difftr, nablar, difft, mu0, J, epsilon_0, diffE
+   • fundamental_constants: Expression involves fundamental constants of nature
+     Constants: e, epsilon_0
+   • quadratic_relation: Expression involves squared terms - possible conservation law
+   • residual: Difference between left and right sides after simplification
+     Expression: -E*diffr**2*epsilon_0*mu0**2*(J*difft + E*diffE*epsilon_0)/(difft*difftr**2*nabla) + mu0*nablar**2*(J*difft + E*diffE*epsilon_0)/(difft*nabla)
+
+============================================================
+CLUSTER #3 (53 equations)
+============================================================
+
+📍 BACKBONE EQUATION:
+   Lorentz Factor
+   Eq(gamma, 1/sqrt(1 - v**(r**2)/c**(r**2)))
+
+➕ SUBSTITUTIONS (2):
+   r = k_e*q_charge/V_voltage
+   (from Electric Potential (Point Charge))
+   v = 8*T*k/m
+   (from Average Speed)
+
+📊 SIMPLIFIED TO:
+   Eq(gamma, 1/sqrt(1 - (8*T*k/m)**(k_e**2*q_charge**2/V_voltage**2)/c**(k_e**2*q_charge**2/V_voltage**2)))
+
+🎯 RESULT: SIMPLIFIED
+
+🔬 DISCOVERED RELATIONS:
+   • key_variables: Core concepts connecting 8 variables across the cluster
+     Variables: c, gamma, k_e, q_charge, T, V_voltage, m, k
+   • fundamental_constants: Expression involves fundamental constants of nature
+     Constants: e, h, c
+   • quadratic_relation: Expression involves squared terms - possible conservation law
+   • residual: Difference between left and right sides after simplification
+     Expression: gamma - 1/sqrt(1 - (8*T*k/m)**(k_e**2*q_charge**2/V_voltage**2)/c**(k_e**2*q_charge**2/V_voltage**2))
+
+============================================================
+CLUSTER #4 (37 equations)
+============================================================
+
+📍 BACKBONE EQUATION:
+   Four-Momentum - Relativistic Invariant (pμp)
+   Eq(mu*p*p_mu, c**2*m*r**2)
+
+➕ SUBSTITUTIONS (3):
+   p = E/c - c*m**2
+   (from Four-Momentum - Relativistic Invariant)
+   m = sqrt(E - c*p)/c
+   (from Four-Momentum - Relativistic Invariant)
+   c = m_e
+   (from Compton Scattering - Wavelength Shift)
+
+📊 SIMPLIFIED TO:
+   Eq(mu*p*p_mu, m_e*r**2*sqrt(E - m_e*p))
+
+🎯 RESULT: SIMPLIFIED
+
+🔬 DISCOVERED RELATIONS:
+   • key_variables: Core concepts connecting 6 variables across the cluster
+     Variables: m_e, p_mu, p, mu, r, E
+   • fundamental_constants: Expression involves fundamental constants of nature
+     Constants: e
+   • quadratic_relation: Expression involves squared terms - possible conservation law
+   • residual: Difference between left and right sides after simplification
+     Expression: -m_e*r**2*sqrt(E - m_e*p) + mu*p*p_mu
+
+============================================================
+CLUSTER #5 (32 equations)
+============================================================
+
+📍 BACKBONE EQUATION:
+   Klein-Gordon Equation - Relativistic Quantum
+   Eq(psi*(c**2*m**2/hbar**2 - nabla2 + Derivative(psi, (t, 2))/c**2), 0)
+
+➕ SUBSTITUTIONS (4):
+   m = gamma*hbar/c**2
+   (from Dirac Equation - Relativistic Fermions)
+   psi = 0
+   (from Dirac Equation - Relativistic Fermions)
+   hbar = c**2*m/gamma
+   (from Dirac Equation - Relativistic Fermions)
+   c = (gamma**2*v**(r**2)/(gamma**2 - 1))**(r**(-2))
+   (from Lorentz Factor)
+
+📊 SIMPLIFIED TO:
+   True
+
+🎯 RESULT: IDENTITY
+
+🔬 DISCOVERED RELATIONS:
+   • fundamental_constants: Expression involves fundamental constants of nature
+     Constants: e
+
+============================================================
+CLUSTER #6 (25 equations)
+============================================================
+
+📍 BACKBONE EQUATION:
+   Toroidal Inductor
+   Eq(L, A*Nr**2*mu0/(pi*r**3))
+
+➕ SUBSTITUTIONS (2):
+   L = E*epsilon/(B*v)
+   (from Motional EMF)
+   mu0 = -I*B/n
+   (from Solenoid Magnetic Field)
+
+📊 SIMPLIFIED TO:
+   Eq(E*epsilon/(B*v), -I*A*B*Nr**2/(pi*n*r**3))
+
+🎯 RESULT: SIMPLIFIED
+
+🔬 DISCOVERED RELATIONS:
+   • key_variables: Core concepts connecting 7 variables across the cluster
+     Variables: A, Nr, n, v, B, epsilon, r
+   • fundamental_constants: Expression involves fundamental constants of nature
+     Constants: e
+   • quadratic_relation: Expression involves squared terms - possible conservation law
+   • residual: Difference between left and right sides after simplification
+     Expression: I*A*B*Nr**2/(pi*n*r**3) + E*epsilon/(B*v)
+
+============================================================
+CLUSTER #7 (21 equations)
+============================================================
+
+📍 BACKBONE EQUATION:
+   Lorentz Force (Complete)
+   Eq(F, q*(B*v + E))
+
+➕ SUBSTITUTIONS (3):
+   v = E*epsilon/(B*L)
+   (from Motional EMF)
+   B = E*epsilon/(L*v)
+   (from Motional EMF)
+   q = I*B/(V_H*n*t)
+   (from Hall Effect)
+
+📊 SIMPLIFIED TO:
+   Eq(F, I*B*(E*L + E*epsilon)/(L*V_H*n*t))
+
+🎯 RESULT: SIMPLIFIED
+
+🔬 DISCOVERED RELATIONS:
+   • key_variables: Core concepts connecting 8 variables across the cluster
+     Variables: L, t, V_H, n, E, F, B, epsilon
+   • fundamental_constants: Expression involves fundamental constants of nature
+     Constants: e
+   • residual: Difference between left and right sides after simplification
+     Expression: -I*B*(E*L + E*epsilon)/(L*V_H*n*t) + F
+
+============================================================
+CLUSTER #8 (16 equations)
+============================================================
+
+📍 BACKBONE EQUATION:
+   Lorentz Force (Complete)
+   Eq(F, q*(B*v + E))
+
+➕ SUBSTITUTIONS (2):
+   v = Z/n
+   (from Collision Rate)
+   B = E*epsilon/(L*v)
+   (from Motional EMF)
+
+📊 SIMPLIFIED TO:
+   Eq(F, E*q + E*Z*epsilon*q/(L*n*v))
+
+🎯 RESULT: SIMPLIFIED
+
+🔬 DISCOVERED RELATIONS:
+   • key_variables: Core concepts connecting 8 variables across the cluster
+     Variables: L, Z, q, n, E, F, v, epsilon
+   • fundamental_constants: Expression involves fundamental constants of nature
+     Constants: e
+   • residual: Difference between left and right sides after simplification
+     Expression: -E*q + F - E*Z*epsilon*q/(L*n*v)
+
+============================================================
+CLUSTER #9 (16 equations)
+============================================================
+
+📍 BACKBONE EQUATION:
+   Four-Momentum - Relativistic Invariant (pμp)
+   Eq(mu*p*p_mu, c**2*m*r**2)
+
+➕ SUBSTITUTIONS (2):
+   p = h/lambda_
+   (from de Broglie Wavelength - Matter Waves (hsq))
+   m = sqrt(E - c*p)/c
+   (from Four-Momentum - Relativistic Invariant)
+
+📊 SIMPLIFIED TO:
+   Eq(h*mu*p_mu/lambda_, c*r**2*sqrt(E - c*p))
+
+🎯 RESULT: SIMPLIFIED
+
+🔬 DISCOVERED RELATIONS:
+   • key_variables: Core concepts connecting 8 variables across the cluster
+     Variables: c, r, lambda_, E, h, p_mu, p, mu
+   • fundamental_constants: Expression involves fundamental constants of nature
+     Constants: h, c
+   • quadratic_relation: Expression involves squared terms - possible conservation law
+   • residual: Difference between left and right sides after simplification
+     Expression: -c*r**2*sqrt(E - c*p) + h*mu*p_mu/lambda_
+
+============================================================
+CLUSTER #10 (14 equations)
+============================================================
+
+📍 BACKBONE EQUATION:
+   Four-Momentum - Relativistic Invariant (pμp)
+   Eq(mu*p*p_mu, c**2*m*r**2)
+
+➕ SUBSTITUTIONS (2):
+   p = E/c - c*m**2
+   (from Four-Momentum - Relativistic Invariant)
+   m = sqrt(E - c*p)/c
+   (from Four-Momentum - Relativistic Invariant)
+
+📊 SIMPLIFIED TO:
+   Eq(mu*p*p_mu, c*r**2*sqrt(E - c*p))
+
+🎯 RESULT: SIMPLIFIED
+
+🔬 DISCOVERED RELATIONS:
+   • key_variables: Core concepts connecting 6 variables across the cluster
+     Variables: c, p_mu, p, mu, r, E
+   • fundamental_constants: Expression involves fundamental constants of nature
+     Constants: c
+   • quadratic_relation: Expression involves squared terms - possible conservation law
+   • residual: Difference between left and right sides after simplification
+     Expression: -c*r**2*sqrt(E - c*p) + mu*p*p_mu
+
+============================================================
+CLUSTER #11 (13 equations)
+============================================================
+
+📍 BACKBONE EQUATION:
+   Coulomb's Law
+   Eq(F, k_e*q1*qr**2/rr**2)
+
+➕ SUBSTITUTIONS (1):
+   k_e = V_voltage*r/q_charge
+   (from Electric Potential (Point Charge))
+
+📊 SIMPLIFIED TO:
+   Eq(F, V_voltage*q1*qr**2*r/(q_charge*rr**2))
+
+🎯 RESULT: SIMPLIFIED
+
+🔬 DISCOVERED RELATIONS:
+   • key_variables: Core concepts connecting 7 variables across the cluster
+     Variables: F, V_voltage, q1, qr, r, rr, q_charge
+   • fundamental_constants: Expression involves fundamental constants of nature
+     Constants: e, h, c
+   • quadratic_relation: Expression involves squared terms - possible conservation law
+   • residual: Difference between left and right sides after simplification
+     Expression: F - V_voltage*q1*qr**2*r/(q_charge*rr**2)
+
+============================================================
+CLUSTER #12 (13 equations)
+============================================================
+
+📍 BACKBONE EQUATION:
+   Blackbody Radiation - Planck Distribution (hfc)
+   Eq(E, f*h)
+
+➕ SUBSTITUTIONS (2):
+   h = E/f
+   (from Blackbody Radiation - Planck Distribution)
+   f = E/h
+   (from Blackbody Radiation - Planck Distribution)
+
+📊 SIMPLIFIED TO:
+   True
+
+🎯 RESULT: IDENTITY
+
+🔬 DISCOVERED RELATIONS:
+   • fundamental_constants: Expression involves fundamental constants of nature
+     Constants: e
+
+============================================================
+CLUSTER #13 (12 equations)
+============================================================
+
+📍 BACKBONE EQUATION:
+   Phase Velocity
+   Eq(v_p, c**2/n)
+
+➕ SUBSTITUTIONS (2):
+   c = v_p*(f - f_c)/f
+   (from Waveguide Phase Velocity)
+   v_p = c*f/(f - f_c)
+   (from Waveguide Phase Velocity)
+
+📊 SIMPLIFIED TO:
+   Eq(c**2/n, c*f/(f - f_c))
+
+🎯 RESULT: SIMPLIFIED
+
+🔬 DISCOVERED RELATIONS:
+   • key_variables: Core concepts connecting 4 variables across the cluster
+     Variables: c, f, f_c, n
+   • fundamental_constants: Expression involves fundamental constants of nature
+     Constants: c
+   • quadratic_relation: Expression involves squared terms - possible conservation law
+   • residual: Difference between left and right sides after simplification
+     Expression: c**2/n - c*f/(f - f_c)
+
+============================================================
+CLUSTER #14 (12 equations)
+============================================================
+
+📍 BACKBONE EQUATION:
+   Electromagnetic Energy Density
+   Eq(u, Br**2/(mu0*r**2) + E*Er**2*epsilon_0/r**2)
+
+➕ SUBSTITUTIONS (3):
+   epsilon_0 = (D - P)*exp(-1)/E
+   (from Electric Displacement)
+   mu0 = difftr**2*nablar**2*exp(-1)/(diffr**2*epsilon_0)
+   (from Wave Equation for B-field)
+   u = 0
+   (from Wave Equation - Classical Waves)
+
+📊 SIMPLIFIED TO:
+   Eq((E*Br**2*E*diffr**2*epsilon_0 + Er**2*difftr**2*nablar**2*(D - P))/(E*difftr**2*nablar**2*r**2), 0)
+
+🎯 RESULT: SIMPLIFIED
+
+🔬 DISCOVERED RELATIONS:
+   • key_variables: Core concepts connecting 10 variables across the cluster
+     Variables: Er, D, Br, E, P, difftr, nablar, r, epsilon_0, diffr
+   • fundamental_constants: Expression involves fundamental constants of nature
+     Constants: e, epsilon_0
+   • quadratic_relation: Expression involves squared terms - possible conservation law
+   • residual: Difference between left and right sides after simplification
+     Expression: (E*Br**2*E*diffr**2*epsilon_0 + Er**2*difftr**2*nablar**2*(D - P))/(E*difftr**2*nablar**2*r**2)
+
+============================================================
+CLUSTER #15 (11 equations)
+============================================================
+
+📍 BACKBONE EQUATION:
+   Bernoulli Equation - Fluid Dynamics
+   Eq(P + g*h*rho + rho*vr**2/r**2, c**2)
+
+➕ SUBSTITUTIONS (4):
+   h = v/(g*r**2)
+   (from Torricelli's Law)
+   g = v/(h*r**2)
+   (from Torricelli's Law)
+   c = (mu_r - 1)/_lighth_planc_lightk_boltzmanni_m
+   (from Magnetic Susceptibility)
+   P = P0 + rh_planc_lightk_boltzmannogh_planc_lightk_boltzmann
+   (from Hydrostatic Pressure)
+
+📊 SIMPLIFIED TO:
+   Eq((mu_r - 1)**2/_lighth_planc_lightk_boltzmanni_m**2, (r**2*(P0 + rh_planc_lightk_boltzmannogh_planc_lightk_boltzmann) + rho*v + rho*vr**2)/r**2)
+
+🎯 RESULT: SIMPLIFIED
+
+🔬 DISCOVERED RELATIONS:
+   • key_variables: Core concepts connecting 8 variables across the cluster
+     Variables: _lighth_planc_lightk_boltzmanni_m, rho, rh_planc_lightk_boltzmannogh_planc_lightk_boltzmann, v, vr, mu_r, P0, r
+   • fundamental_constants: Expression involves fundamental constants of nature
+     Constants: h, c
+   • quadratic_relation: Expression involves squared terms - possible conservation law
+   • residual: Difference between left and right sides after simplification
+     Expression: -(r**2*(P0 + rh_planc_lightk_boltzmannogh_planc_lightk_boltzmann) + rho*v + rho*vr**2)/r**2 + (mu_r - 1)**2/_lighth_planc_lightk_boltzmanni_m**2
+
+============================================================
+CLUSTER #16 (10 equations)
+============================================================
+
+📍 BACKBONE EQUATION:
+   Crystal Lattice - Solid State
+   Eq(d*r**2*sin(theta), lambda_*n)
+
+➕ SUBSTITUTIONS (2):
+   lambda_ = d*sin(theta)/m
+   (from Interference - Young's Double Slit)
+   d = lambda_*m/sin(theta)
+   (from Interference - Young's Double Slit)
+
+📊 SIMPLIFIED TO:
+   Eq(lambda_*n, lambda_*m*r**2)
+
+🎯 RESULT: SIMPLIFIED
+
+🔬 DISCOVERED RELATIONS:
+   • key_variables: Core concepts connecting 4 variables across the cluster
+     Variables: m, r, n, lambda_
+   • quadratic_relation: Expression involves squared terms - possible conservation law
+   • polynomial_symmetry: Both sides are polynomial - suggests algebraic conservation
+   • residual: Difference between left and right sides after simplification
+     Expression: -lambda_*m*r**2 + lambda_*n
+
+============================================================
+CLUSTER #17 (10 equations)
+============================================================
+
+📍 BACKBONE EQUATION:
+   Crystal Lattice - Solid State
+   Eq(d*r**2*sin(theta), lambda_*n)
+
+➕ SUBSTITUTIONS (2):
+   lambda_ = d*sin(theta)/m
+   (from Interference - Young's Double Slit)
+   d = lambda_*m/sin(theta)
+   (from Interference - Young's Double Slit)
+
+📊 SIMPLIFIED TO:
+   Eq(lambda_*n, lambda_*m*r**2)
+
+🎯 RESULT: SIMPLIFIED
+
+🔬 DISCOVERED RELATIONS:
+   • key_variables: Core concepts connecting 4 variables across the cluster
+     Variables: m, r, n, lambda_
+   • quadratic_relation: Expression involves squared terms - possible conservation law
+   • polynomial_symmetry: Both sides are polynomial - suggests algebraic conservation
+   • residual: Difference between left and right sides after simplification
+     Expression: -lambda_*m*r**2 + lambda_*n
+
+============================================================
+CLUSTER #18 (9 equations)
+============================================================
+
+📍 BACKBONE EQUATION:
+   Malus's Law
+   Eq(I, I0*c*cosr**2*theta)
+
+🎯 RESULT: no_substitutions
+
+============================================================
+CLUSTER #19 (9 equations)
+============================================================
+
+📍 BACKBONE EQUATION:
+   Toroidal Inductor
+   Eq(L, A*Nr**2*mu0/(pi*r**3))
+
+➕ SUBSTITUTIONS (1):
+   mu0 = B/(H + M)
+   (from Magnetic Field Relation)
+
+📊 SIMPLIFIED TO:
+   Eq(L, A*B*Nr**2/(pi*r**3*(H + M)))
+
+🎯 RESULT: SIMPLIFIED
+
+🔬 DISCOVERED RELATIONS:
+   • key_variables: Core concepts connecting 7 variables across the cluster
+     Variables: A, H, L, B, Nr, r, M
+   • quadratic_relation: Expression involves squared terms - possible conservation law
+   • residual: Difference between left and right sides after simplification
+     Expression: -A*B*Nr**2/(pi*r**3*(H + M)) + L
+
+============================================================
+CLUSTER #20 (9 equations)
+============================================================
+
+📍 BACKBONE EQUATION:
+   Combined Gas Law
+   Eq(P1*V1/T1, Pr**2*Vr**2/Tr**2)
+
+➕ SUBSTITUTIONS (3):
+   V1 = Vr**2*n1/nr**2
+   (from Avogadro's Law)
+   P1 = Pr**2*Vr**2/V1
+   (from Boyle's Law)
+   T1 = P1*Tr**2/Pr**2
+   (from Gay-Lussac's Law)
+
+📊 SIMPLIFIED TO:
+   Eq(Pr**2*Vr**2/Tr**2, Pr**4*Vr**4*n1/(P1*Tr**2*V1*nr**2))
+
+🎯 RESULT: SIMPLIFIED
+
+🔬 DISCOVERED RELATIONS:
+   • key_variables: Core concepts connecting 7 variables across the cluster
+     Variables: n1, Tr, Pr, P1, Vr, V1, nr
+   • quadratic_relation: Expression involves squared terms - possible conservation law
+   • residual: Difference between left and right sides after simplification
+     Expression: Pr**2*Vr**2/Tr**2 - Pr**4*Vr**4*n1/(P1*Tr**2*V1*nr**2)
+
+============================================================
+CLUSTER #21 (9 equations)
+============================================================
+
+📍 BACKBONE EQUATION:
+   Lorentz Force (Complete)
+   Eq(F, q*(B*v + E))
+
+➕ SUBSTITUTIONS (2):
+   v = E*epsilon/(B*L)
+   (from Motional EMF)
+   B = E*epsilon/(L*v)
+   (from Motional EMF)
+
+📊 SIMPLIFIED TO:
+   Eq(F, q*(E*L + E*epsilon)/L)
+
+🎯 RESULT: SIMPLIFIED
+
+🔬 DISCOVERED RELATIONS:
+   • key_variables: Core concepts connecting 5 variables across the cluster
+     Variables: F, L, epsilon, q, E
+   • fundamental_constants: Expression involves fundamental constants of nature
+     Constants: e
+   • residual: Difference between left and right sides after simplification
+     Expression: F - q*(E*L + E*epsilon)/L
+
+============================================================
+CLUSTER #22 (9 equations)
+============================================================
+
+📍 BACKBONE EQUATION:
+   Blackbody Radiation - Planck Distribution (hfc)
+   Eq(E, f*h)
+
+➕ SUBSTITUTIONS (2):
+   h = E/f
+   (from Blackbody Radiation - Planck Distribution)
+   f = E/h
+   (from Blackbody Radiation - Planck Distribution)
+
+📊 SIMPLIFIED TO:
+   True
+
+🎯 RESULT: IDENTITY
+
+🔬 DISCOVERED RELATIONS:
+   • fundamental_constants: Expression involves fundamental constants of nature
+     Constants: e
+
+============================================================
+CLUSTER #23 (9 equations)
+============================================================
+
+📍 BACKBONE EQUATION:
+   Blackbody Radiation - Planck Distribution (hfc)
+   Eq(E, f*h)
+
+➕ SUBSTITUTIONS (2):
+   h = E/f
+   (from Blackbody Radiation - Planck Distribution)
+   f = E/h
+   (from Blackbody Radiation - Planck Distribution)
+
+📊 SIMPLIFIED TO:
+   True
+
+🎯 RESULT: IDENTITY
+
+🔬 DISCOVERED RELATIONS:
+   • fundamental_constants: Expression involves fundamental constants of nature
+     Constants: e
+
+============================================================
+CLUSTER #24 (9 equations)
+============================================================
+
+📍 BACKBONE EQUATION:
+   Malus's Law
+   Eq(I, I0*c*cosr**2*theta)
+
+🎯 RESULT: no_substitutions
+
+============================================================
+CLUSTER #25 (9 equations)
+============================================================
+
+📍 BACKBONE EQUATION:
+   Combined Gas Law
+   Eq(P1*V1/T1, Pr**2*Vr**2/Tr**2)
+
+➕ SUBSTITUTIONS (3):
+   V1 = Vr**2*n1/nr**2
+   (from Avogadro's Law)
+   P1 = Pr**2*Vr**2/V1
+   (from Boyle's Law)
+   T1 = P1*Tr**2/Pr**2
+   (from Gay-Lussac's Law)
+
+📊 SIMPLIFIED TO:
+   Eq(Pr**2*Vr**2/Tr**2, Pr**4*Vr**4*n1/(P1*Tr**2*V1*nr**2))
+
+🎯 RESULT: SIMPLIFIED
+
+🔬 DISCOVERED RELATIONS:
+   • key_variables: Core concepts connecting 7 variables across the cluster
+     Variables: n1, Tr, Pr, P1, Vr, V1, nr
+   • quadratic_relation: Expression involves squared terms - possible conservation law
+   • residual: Difference between left and right sides after simplification
+     Expression: Pr**2*Vr**2/Tr**2 - Pr**4*Vr**4*n1/(P1*Tr**2*V1*nr**2)
+
+============================================================
+CLUSTER #26 (8 equations)
+============================================================
+
+📍 BACKBONE EQUATION:
+   Blackbody Radiation - Planck Distribution (hfc)
+   Eq(E, f*h)
+
+➕ SUBSTITUTIONS (2):
+   h = E/f
+   (from Blackbody Radiation - Planck Distribution)
+   f = E/h
+   (from Blackbody Radiation - Planck Distribution)
+
+📊 SIMPLIFIED TO:
+   True
+
+🎯 RESULT: IDENTITY
+
+🔬 DISCOVERED RELATIONS:
+   • fundamental_constants: Expression involves fundamental constants of nature
+     Constants: e
+
+============================================================
+CLUSTER #27 (8 equations)
+============================================================
+
+📍 BACKBONE EQUATION:
+   Four-Momentum - Relativistic Invariant
+   Eq(sqrt(E - c*p), c*m)
+
+➕ SUBSTITUTIONS (1):
+   p = h/lambda_
+   (from de Broglie Wavelength - Matter Waves (hsq))
+
+📊 SIMPLIFIED TO:
+   Eq(c*m, sqrt(E - c*h/lambda_))
+
+🎯 RESULT: SIMPLIFIED
+
+🔬 DISCOVERED RELATIONS:
+   • key_variables: Core concepts connecting 5 variables across the cluster
+     Variables: c, m, h, E, lambda_
+   • fundamental_constants: Expression involves fundamental constants of nature
+     Constants: h, c
+   • residual: Difference between left and right sides after simplification
+     Expression: c*m - sqrt(E - c*h/lambda_)
+
+============================================================
+CLUSTER #28 (8 equations)
+============================================================
+
+📍 BACKBONE EQUATION:
+   Combined Gas Law
+   Eq(P1*V1/T1, Pr**2*Vr**2/Tr**2)
+
+➕ SUBSTITUTIONS (3):
+   V1 = Vr**2*n1/nr**2
+   (from Avogadro's Law)
+   P1 = Pr**2*Vr**2/V1
+   (from Boyle's Law)
+   T1 = P1*Tr**2/Pr**2
+   (from Gay-Lussac's Law)
+
+📊 SIMPLIFIED TO:
+   Eq(Pr**2*Vr**2/Tr**2, Pr**4*Vr**4*n1/(P1*Tr**2*V1*nr**2))
+
+🎯 RESULT: SIMPLIFIED
+
+🔬 DISCOVERED RELATIONS:
+   • key_variables: Core concepts connecting 7 variables across the cluster
+     Variables: n1, Tr, Pr, P1, Vr, V1, nr
+   • quadratic_relation: Expression involves squared terms - possible conservation law
+   • residual: Difference between left and right sides after simplification
+     Expression: Pr**2*Vr**2/Tr**2 - Pr**4*Vr**4*n1/(P1*Tr**2*V1*nr**2)
+
+============================================================
+CLUSTER #29 (8 equations)
+============================================================
+
+📍 BACKBONE EQUATION:
+   Crystal Lattice - Solid State
+   Eq(d*r**2*sin(theta), lambda_*n)
+
+➕ SUBSTITUTIONS (2):
+   lambda_ = d*sin(theta)/m
+   (from Interference - Young's Double Slit)
+   d = lambda_*m/sin(theta)
+   (from Interference - Young's Double Slit)
+
+📊 SIMPLIFIED TO:
+   Eq(lambda_*n, lambda_*m*r**2)
+
+🎯 RESULT: SIMPLIFIED
+
+🔬 DISCOVERED RELATIONS:
+   • key_variables: Core concepts connecting 4 variables across the cluster
+     Variables: m, r, n, lambda_
+   • quadratic_relation: Expression involves squared terms - possible conservation law
+   • polynomial_symmetry: Both sides are polynomial - suggests algebraic conservation
+   • residual: Difference between left and right sides after simplification
+     Expression: -lambda_*m*r**2 + lambda_*n
+
+============================================================
+CLUSTER #30 (8 equations)
+============================================================
+
+📍 BACKBONE EQUATION:
+   Blackbody Radiation - Planck Distribution (hfc)
+   Eq(E, f*h)
+
+➕ SUBSTITUTIONS (2):
+   h = E/f
+   (from Blackbody Radiation - Planck Distribution)
+   f = E/h
+   (from Blackbody Radiation - Planck Distribution)
+
+📊 SIMPLIFIED TO:
+   True
+
+🎯 RESULT: IDENTITY
+
+🔬 DISCOVERED RELATIONS:
+   • fundamental_constants: Expression involves fundamental constants of nature
+     Constants: e
+

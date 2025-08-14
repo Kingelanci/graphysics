@@ -1,0 +1,867 @@
+================================================================================
+
+CLUSTER SIMPLIFICATION DISCOVERIES
+
+================================================================================
+
+
+
+Generated: 2025-08-09T16:32:33.363322
+
+Clusters analyzed: 20
+
+
+
+SUMMARY:
+
+  ✅ Perfect identities: 0
+
+  🔍 Residuals found: 4
+
+  📦 Simplified: 6
+
+
+
+
+
+============================================================
+
+CLUSTER #1 (99 equations)
+
+============================================================
+
+
+
+📍 BACKBONE EQUATION:
+
+   Blackbody Radiation - Planck Distribution (hfc)
+
+   2*h*f³ / (c² * (exp(h*f/(k*T)) - 1))
+
+   Centrality: 0.398
+
+
+
+🎯 RESULT: None
+
+   Could not parse backbone equation
+
+
+
+============================================================
+
+CLUSTER #2 (83 equations)
+
+============================================================
+
+
+
+📍 BACKBONE EQUATION:
+
+   Blackbody Radiation - Planck Distribution (hfc)
+
+   2*h*f³ / (c² * (exp(h*f/(k*T)) - 1))
+
+   Centrality: 0.411
+
+
+
+🎯 RESULT: None
+
+   Could not parse backbone equation
+
+
+
+============================================================
+
+CLUSTER #3 (53 equations)
+
+============================================================
+
+
+
+📍 BACKBONE EQUATION:
+
+   Blackbody Radiation - Planck Distribution (hfc)
+
+   2*h*f³ / (c² * (exp(h*f/(k*T)) - 1))
+
+   Centrality: 0.422
+
+
+
+🎯 RESULT: None
+
+   Could not parse backbone equation
+
+
+
+============================================================
+
+CLUSTER #4 (37 equations)
+
+============================================================
+
+
+
+📍 BACKBONE EQUATION:
+
+   Plasma Frequency - Plasma Physics
+
+   sqrt(n*e² / (ε_0*m))
+
+   Centrality: 0.385
+
+
+
+🎯 RESULT: None
+
+   Could not parse backbone equation
+
+
+
+============================================================
+
+CLUSTER #5 (32 equations)
+
+============================================================
+
+
+
+📍 BACKBONE EQUATION:
+
+   Klein-Gordon Equation - Relativistic Quantum
+
+   (∂²/∂t² - c²*∇² + (m*c²/ℏ)²)*ψ = 0
+
+   Centrality: 0.386
+
+
+
+🎯 RESULT: None
+
+   Could not parse backbone equation
+
+
+
+============================================================
+
+CLUSTER #6 (25 equations)
+
+============================================================
+
+
+
+📍 BACKBONE EQUATION:
+
+   Motional EMF
+
+   ε = B × L × v
+
+   Centrality: 0.392
+
+
+
+➕ SUBSTITUTIONS (5):
+
+   t = I*B/(V_H*n*q)
+
+   (from Hall Effect)
+
+   t = I*ε/L
+
+   (from Inductance EMF)
+
+   t = -d*ε/dΦ_B
+
+   (from Faraday's Law)
+
+   E = -B*v + F/q
+
+   (from Lorentz Force (Complete))
+
+   t = -ε/Φ
+
+   (from Lenz's Law Direction)
+
+
+
+📊 SIMPLIFIED TO:
+
+   Eq(ε, B*L*v)
+
+
+
+🎯 RESULT: RESIDUAL
+
+   🔍 Residual term found: -B*L*v + ε. This could indicate approximations or missing physics.
+
+
+
+🔬 DISCOVERED RELATIONS:
+
+   • residual: Difference between left and right sides after simplification
+
+     Expression: -B*L*v + ε
+
+   • key_variables: Core concepts connecting 1 variables across the cluster
+
+     Variables: B
+
+   • polynomial_symmetry: Both sides are polynomial - suggests algebraic conservation
+
+
+
+🔬🔬🔬🔬🔬🔬🔬🔬🔬🔬🔬🔬🔬🔬🔬🔬🔬🔬🔬🔬
+
+POTENTIAL DISCOVERY: Residual terms found!
+
+These could indicate:
+
+  - Approximations in the original equations
+
+  - Missing correction factors
+
+  - New physics to be discovered
+
+🔬🔬🔬🔬🔬🔬🔬🔬🔬🔬🔬🔬🔬🔬🔬🔬🔬🔬🔬🔬
+
+
+
+============================================================
+
+CLUSTER #7 (21 equations)
+
+============================================================
+
+
+
+📍 BACKBONE EQUATION:
+
+   Motional EMF
+
+   ε = B × L × v
+
+   Centrality: 0.421
+
+
+
+➕ SUBSTITUTIONS (5):
+
+   t = I*B/(V_H*n*q)
+
+   (from Hall Effect)
+
+   t = I*ε/L
+
+   (from Inductance EMF)
+
+   t = -d*ε/dΦ_B
+
+   (from Faraday's Law)
+
+   E = -B*v + F/q
+
+   (from Lorentz Force (Complete))
+
+   t = -ε/Φ
+
+   (from Lenz's Law Direction)
+
+
+
+📊 SIMPLIFIED TO:
+
+   Eq(ε, B*L*v)
+
+
+
+🎯 RESULT: RESIDUAL
+
+   🔍 Residual term found: -B*L*v + ε. This could indicate approximations or missing physics.
+
+
+
+🔬 DISCOVERED RELATIONS:
+
+   • residual: Difference between left and right sides after simplification
+
+     Expression: -B*L*v + ε
+
+   • key_variables: Core concepts connecting 1 variables across the cluster
+
+     Variables: B
+
+   • polynomial_symmetry: Both sides are polynomial - suggests algebraic conservation
+
+
+
+🔬🔬🔬🔬🔬🔬🔬🔬🔬🔬🔬🔬🔬🔬🔬🔬🔬🔬🔬🔬
+
+POTENTIAL DISCOVERY: Residual terms found!
+
+These could indicate:
+
+  - Approximations in the original equations
+
+  - Missing correction factors
+
+  - New physics to be discovered
+
+🔬🔬🔬🔬🔬🔬🔬🔬🔬🔬🔬🔬🔬🔬🔬🔬🔬🔬🔬🔬
+
+
+
+============================================================
+
+CLUSTER #8 (16 equations)
+
+============================================================
+
+
+
+📍 BACKBONE EQUATION:
+
+   Reynolds Number - Fluid Flow
+
+   ρ * v * L / η
+
+   Centrality: 0.497
+
+
+
+➕ SUBSTITUTIONS (5):
+
+   E = -B*v + F/q
+
+   (from Lorentz Force (Complete))
+
+   t = I*ε/L
+
+   (from Inductance EMF)
+
+   v = ε/(B*L)
+
+   (from Motional EMF)
+
+   t = -d*ε/dΦ_B
+
+   (from Faraday's Law)
+
+   t = -ε/Φ
+
+   (from Lenz's Law Direction)
+
+
+
+📊 SIMPLIFIED TO:
+
+   ε*ρ/(B*η)
+
+
+
+🎯 RESULT: SIMPLIFIED
+
+   📦 Simplified to: ε*ρ/(B*η)
+
+
+
+🔬 DISCOVERED RELATIONS:
+
+   • key_variables: Core concepts connecting 2 variables across the cluster
+
+     Variables: v, L
+
+
+
+============================================================
+
+CLUSTER #9 (16 equations)
+
+============================================================
+
+
+
+📍 BACKBONE EQUATION:
+
+   Plasma Frequency - Plasma Physics
+
+   sqrt(n*e² / (ε_0*m))
+
+   Centrality: 0.427
+
+
+
+🎯 RESULT: None
+
+   Could not parse backbone equation
+
+
+
+============================================================
+
+CLUSTER #10 (14 equations)
+
+============================================================
+
+
+
+📍 BACKBONE EQUATION:
+
+   Four-Momentum - Relativistic Invariant (pμp)
+
+   p_μ * p^μ = (m*c)²
+
+   Centrality: 0.470
+
+
+
+🎯 RESULT: None
+
+   Could not parse backbone equation
+
+
+
+============================================================
+
+CLUSTER #11 (13 equations)
+
+============================================================
+
+
+
+📍 BACKBONE EQUATION:
+
+   Electric Force - Electrostatics (πεq)
+
+   1 / (4 * π * ε_0) * q_1 * q_2 / r^2
+
+   Centrality: 0.542
+
+
+
+➕ SUBSTITUTIONS (1):
+
+   V = k*q/r
+
+   (from Electric Potential (Point Charge))
+
+
+
+📊 SIMPLIFIED TO:
+
+   q_1*q_2/(4*r**2*ε_0*π)
+
+
+
+🎯 RESULT: SIMPLIFIED
+
+   📦 Simplified to: q_1*q_2/(4*r**2*ε_0*π)
+
+
+
+🔬 DISCOVERED RELATIONS:
+
+   • quadratic_relation: Expression involves squared terms - possible conservation law
+
+   • key_variables: Core concepts connecting 1 variables across the cluster
+
+     Variables: e
+
+
+
+============================================================
+
+CLUSTER #12 (13 equations)
+
+============================================================
+
+
+
+📍 BACKBONE EQUATION:
+
+   Radioactive Decay - Exponential Decay (Nex)
+
+   N_0 * exp(-t / τ)
+
+   Centrality: 0.454
+
+
+
+📊 SIMPLIFIED TO:
+
+   N_0*exp(-t/τ)
+
+
+
+🎯 RESULT: SIMPLIFIED
+
+   📦 Simplified to: N_0*exp(-t/τ)
+
+
+
+🔬 DISCOVERED RELATIONS:
+
+   • key_variables: Core concepts connecting 4 variables across the cluster
+
+     Variables: e, _chargexp, k_boltzmann, T
+
+
+
+============================================================
+
+CLUSTER #13 (12 equations)
+
+============================================================
+
+
+
+📍 BACKBONE EQUATION:
+
+   Photoelectric Effect - Einstein Equation
+
+   h*f - φ
+
+   Centrality: 0.420
+
+
+
+➕ SUBSTITUTIONS (1):
+
+   p = h/λ
+
+   (from de Broglie Wavelength)
+
+
+
+📊 SIMPLIFIED TO:
+
+   f*h - φ
+
+
+
+🎯 RESULT: SIMPLIFIED
+
+   📦 Simplified to: f*h - φ
+
+
+
+🔬 DISCOVERED RELATIONS:
+
+   • fundamental_constants: Expression involves fundamental constants of nature
+
+   • key_variables: Core concepts connecting 2 variables across the cluster
+
+     Variables: c, h
+
+
+
+============================================================
+
+CLUSTER #14 (12 equations)
+
+============================================================
+
+
+
+📍 BACKBONE EQUATION:
+
+   Hysteresis Loss
+
+   P = ηfB_max^n
+
+   Centrality: 0.438
+
+
+
+➕ SUBSTITUTIONS (1):
+
+   P = ε₀χ_eE
+
+   (from Polarization)
+
+
+
+📊 SIMPLIFIED TO:
+
+   Eq(ε₀χ_eE, ηfB_max**n)
+
+
+
+🎯 RESULT: RESIDUAL
+
+   🔍 Residual term found: ε₀χ_eE - ηfB_max**n. This could indicate approximations or missing physics.
+
+
+
+🔬 DISCOVERED RELATIONS:
+
+   • residual: Difference between left and right sides after simplification
+
+     Expression: ε₀χ_eE - ηfB_max**n
+
+   • key_variables: Core concepts connecting 2 variables across the cluster
+
+     Variables: e, _chargepsilon0
+
+
+
+🔬🔬🔬🔬🔬🔬🔬🔬🔬🔬🔬🔬🔬🔬🔬🔬🔬🔬🔬🔬
+
+POTENTIAL DISCOVERY: Residual terms found!
+
+These could indicate:
+
+  - Approximations in the original equations
+
+  - Missing correction factors
+
+  - New physics to be discovered
+
+🔬🔬🔬🔬🔬🔬🔬🔬🔬🔬🔬🔬🔬🔬🔬🔬🔬🔬🔬🔬
+
+
+
+============================================================
+
+CLUSTER #15 (11 equations)
+
+============================================================
+
+
+
+📍 BACKBONE EQUATION:
+
+   Bernoulli Equation - Fluid Dynamics
+
+   P + (1/2)*ρ*v² + ρ*g*h = constant
+
+   Centrality: 0.656
+
+
+
+🎯 RESULT: None
+
+   Could not parse backbone equation
+
+
+
+============================================================
+
+CLUSTER #16 (10 equations)
+
+============================================================
+
+
+
+📍 BACKBONE EQUATION:
+
+   Diffraction - Single Slit
+
+   a * sin(θ) = m * λ
+
+   Centrality: 0.506
+
+
+
+➕ SUBSTITUTIONS (3):
+
+   m = d*sin(θ)/λ
+
+   (from Interference - Young's Double Slit)
+
+   a = m*λ/sin(θ)
+
+   (from Single Slit Diffraction (Minima))
+
+   m = (d*sin(θ) - λ/2)/λ
+
+   (from Interference - Young's Double Slit (dsi))
+
+
+
+📊 SIMPLIFIED TO:
+
+   True
+
+
+
+🎯 RESULT: SIMPLIFIED
+
+   📦 Simplified to: True
+
+
+
+🔬 DISCOVERED RELATIONS:
+
+   • key_variables: Core concepts connecting 2 variables across the cluster
+
+     Variables: λ, θ
+
+
+
+============================================================
+
+CLUSTER #17 (10 equations)
+
+============================================================
+
+
+
+📍 BACKBONE EQUATION:
+
+   Diffraction - Single Slit
+
+   a * sin(θ) = m * λ
+
+   Centrality: 0.506
+
+
+
+➕ SUBSTITUTIONS (3):
+
+   m = d*sin(θ)/λ
+
+   (from Interference - Young's Double Slit)
+
+   a = m*λ/sin(θ)
+
+   (from Single Slit Diffraction (Minima))
+
+   m = (d*sin(θ) - λ/2)/λ
+
+   (from Interference - Young's Double Slit (dsi))
+
+
+
+📊 SIMPLIFIED TO:
+
+   True
+
+
+
+🎯 RESULT: SIMPLIFIED
+
+   📦 Simplified to: True
+
+
+
+🔬 DISCOVERED RELATIONS:
+
+   • key_variables: Core concepts connecting 2 variables across the cluster
+
+     Variables: λ, θ
+
+
+
+============================================================
+
+CLUSTER #18 (9 equations)
+
+============================================================
+
+
+
+📍 BACKBONE EQUATION:
+
+   AC Power
+
+   P = V_rms × I_rms × cos(φ)
+
+   Centrality: 0.448
+
+
+
+➕ SUBSTITUTIONS (1):
+
+   E = B*c
+
+   (from Electromagnetic Wave Relation)
+
+
+
+📊 SIMPLIFIED TO:
+
+   Eq(P, I_rms*V_rms*cos(φ))
+
+
+
+🎯 RESULT: RESIDUAL
+
+   🔍 Residual term found: -I_rms*V_rms*cos(φ) + P. This could indicate approximations or missing physics.
+
+
+
+🔬 DISCOVERED RELATIONS:
+
+   • residual: Difference between left and right sides after simplification
+
+     Expression: -I_rms*V_rms*cos(φ) + P
+
+   • key_variables: Core concepts connecting 3 variables across the cluster
+
+     Variables: c, theta, _lightos
+
+
+
+🔬🔬🔬🔬🔬🔬🔬🔬🔬🔬🔬🔬🔬🔬🔬🔬🔬🔬🔬🔬
+
+POTENTIAL DISCOVERY: Residual terms found!
+
+These could indicate:
+
+  - Approximations in the original equations
+
+  - Missing correction factors
+
+  - New physics to be discovered
+
+🔬🔬🔬🔬🔬🔬🔬🔬🔬🔬🔬🔬🔬🔬🔬🔬🔬🔬🔬🔬
+
+
+
+============================================================
+
+CLUSTER #19 (9 equations)
+
+============================================================
+
+
+
+📍 BACKBONE EQUATION:
+
+   Solenoid Magnetic Field
+
+   B = μ₀ × n × I
+
+   Centrality: 0.464
+
+
+
+🎯 RESULT: None
+
+   Could not parse backbone equation
+
+
+
+============================================================
+
+CLUSTER #20 (9 equations)
+
+============================================================
+
+
+
+📍 BACKBONE EQUATION:
+
+   Avogadro's Law
+
+   V₁/n₁ = V₂/n₂
+
+   Centrality: 0.504
+
+
+
+🎯 RESULT: None
+
+   Could not parse backbone equation
