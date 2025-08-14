@@ -1,6 +1,6 @@
 # graphysics
 
-**Graph Neural Networks for Physics Equation Discovery using Enhanced Semantic Representations**
+**A Graph-Based Framework for Exploring Mathematical Patterns in Physics**
 
 ## Quick Start
 
@@ -26,9 +26,11 @@ Click "Open in Colab" badge above
 | SuperGNN-comparison | `models_comparison.py` | 5000 | **0.9746 ± 0.0026** | **0.9697 ± 0.0032** |
 
 **5 Independent Runs**: Seeds [42, 123, 456, 789, 999] - Full reproducibility  
-**Performance**: +1.58% AUC improvement from 1000→3000 epochs, significant better than other models 5000 epochs (models_comparison.py)
+**Performance**: +1.58% AUC improvement from 1000→3000 epochs, significantly better than other models at 5000 epochs
 
 ## Pipeline Architecture
+
+### 1. Graph Construction & Training
 **SuperPhysicsGNN**: 52,065 parameters, Multi-Head GAT with Edge Weights
 - **Attention Heads**: 4 → 2 → 1  
 - **Hidden Dims**: 64 → 32 → 16
@@ -39,21 +41,47 @@ Click "Open in Colab" badge above
 3. **GNN Training**: `grm_trainer_1000.py` or `grm_trainer_3000.py` - SuperPhysicsGNN
 4. **Analysis**: Cross-domain physics discovery with attention mechanism
 
-## Key Results from Experiments
+### 2. Cluster Analysis & Symbolic Simplification (NEW)
+- **Cluster Formation**: `cluster.py` - Identifies equation clusters using multiple algorithms
+  - Cliques, Communities (Louvain), K-cores, Connected components
+  - Integrates GNN predictions, graph bridges, and variable similarity
+  - 30 clusters analyzed (3-99 equations per cluster)
+  
+- **Symbolic Analysis**: `cluster_analysis.py` - Mathematical simplification engine
+  - Backbone equation selection via complexity scoring
+  - Variable substitution chains (max 10 iterations)
+  - SymPy-based algebraic reduction
+  - Classification: IDENTITY, RESIDUAL, SIMPLIFIED, FAILED
+
+## Key Results
+
+### Graph & Training Metrics
 - **Graph Construction**: 10,422 bridges found → 4,557 significant kept
 - **Training Time**: ~15 minutes (1000 epochs) or ~45 minutes (3000 epochs) on CPU
-- **Architecture**: Multi-Head GAT with Physics-Aware Decoder
-- **Reproducibility**: 5 independent runs with different seeds
 - **Top Equation Hub**: Compton Scattering (92 connections, avg weight 0.704)
 
-- Statistical Validation
+### Symbolic Analysis Results
+- **30 clusters analyzed**: 80% produced interpretable results
+- **Theory Validation**: Klein-Gordon/Dirac hierarchy confirmed
+- **Novel Synthesis**: Magnetic Reynolds Number from EM-fluid coupling
+- **Error Detection**: Dimensional inconsistencies identified (c = m_e)
+- **Research Directions**: Analog gravity connections discovered
 
-FDR Analysis (fdr_analysis.py) - Bootstrap confidence intervals, negative controls, sensitivity analysis
-Model Comparison (model_comparison.py) - Statistical testing against baselines (GCN, GAT, GraphSAGE)
+### Statistical Validation
+- **FDR Analysis** (`fdr_analysis.py`): Bootstrap confidence intervals, negative controls
+- **Model Comparison** (`model_comparison.py`): Statistical testing against baselines
 
-Network Visualizations
+### Network Visualizations
+- **Ego Networks** (`ego_networks.py`): Physics concept-centered visualizations
+- **Cluster Networks**: Dense mathematical relationship graphs
 
-Ego Networks (ego_networks.py) - Physics concept-centered visualizations
+## Supplementary Materials
+
+Available in `/supplementary/`:
+- `all_clusters_report.txt` - Complete analysis of all 30 clusters
+- `cluster_simplification_discoveries.txt` - Key symbolic findings and interpretations
+- `cluster_simplification_discoveries_test.txt` - Test run results
+- `equation_super_prediction_sample_seed123.txt` - Sample predictions with scores
 
 ## Requirements
 
@@ -80,26 +108,47 @@ graphysics/
 ├── graph_builder.py                   # Graph construction  
 ├── grm_trainer_1000.py               # Fast training (15min)
 ├── grm_trainer_3000.py               # Full training (45min)
+├── cluster.py                         # Cluster formation algorithms
+├── cluster_analysis.py                # Symbolic simplification engine
 ├── final_physics_database.json       # 400 equations dataset
 ├── requirements.txt                   # Dependencies
-└── analysis/
-    ├── fdr_analysis.py               # Statistical FDR validation
-    ├── ego_networks.py               # Graph visualizations & ego networks
-    └── model_comparison.py           # Baseline comparisons
+├── analysis/
+│   ├── fdr_analysis.py               # Statistical FDR validation
+│   ├── ego_networks.py               # Graph visualizations
+│   └── model_comparison.py           # Baseline comparisons
+└── supplementary/
+    ├── all_clusters_report.txt
+    ├── cluster_simplification_discoveries.txt
+    ├── cluster_simplification_discoveries_test.txt
+    └── equation_super_prediction_sample_seed123.txt
 ```
+
+## Key Insights
+
+This framework operates as a **hypothesis generation engine**, not a discovery validator. It:
+1. **Generates** hundreds of cross-domain mathematical connections
+2. **Audits** knowledge bases for consistency and errors
+3. **Synthesizes** mathematical relationships across physics domains
+4. **Transforms** computational failures into research directions
+
+The system intentionally over-generates candidates (like high-throughput screening) to ensure comprehensive exploration of mathematical possibility space.
 
 ## Author
 Massimiliano Romiti  
-Indipendent Researcher
+Independent Researcher
  
 📧 massimiliano.romiti@acm.org  
 🔗 [ORCID](https://orcid.org/0009-0004-7264-9703)
 
 ## Citation
 ```bibtex
-@article{graphysics2025,
-  title={Graph Neural Networks for Physics Equation Discovery using Enhanced Semantic Representations},
-  author={Massimiliano Romiti},
+@article{romiti2025graphysics,
+  title={A Graph-Based Framework for Exploring Mathematical Patterns in Physics: A Proof of Concept},
+  author={Romiti, Massimiliano},
   year={2025},
-  doi={https://doi.org/10.48550/arXiv.2508.05724}
+  journal={arXiv preprint arXiv:2508.05724v2}
+}
 ```
+
+## License
+MIT License - See LICENSE file for details
